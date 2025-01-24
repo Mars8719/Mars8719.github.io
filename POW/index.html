@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio</title>
-    <link rel= "stylesheet" href='{{url_for('static', filename='CSS/estilo_index.css')}}'>
-    <link rel= "stylesheet" href='{{url_for('static', filename='CSS/estilo_p_index.css')}}'>
+    <!-- Rutas actualizadas para GitHub Pages -->
+    <link rel="stylesheet" href="static/CSS/estilo_index.css">
+    <link rel="stylesheet" href="static/CSS/estilo_p_index.css">
+
 </head>
 <body>
     <div class = "content">
@@ -18,7 +20,7 @@
                         <a href="index.html" class="menu_link">Home</a>
                     </li>
                     <li class="menu_item menu_item--sh">
-                        <a href="#" class="menu_link">Secciones<img src='{{url_for('static', filename="/svgs/arrow.svg")}}' class=" menu__arrow"></a>
+                        <a href="#" class="menu_link">Secciones<img src="static/svgs/arrow.svg" class="menu__arrow"></a>
                         <ul class="menu_n">
                             <li class="menu_inside">
                                 <a href="/contacto" class="menu_link menu_link--m_ins">Contacto</a>
@@ -27,7 +29,7 @@
                     </li>
                 </ul>    
                 <div class="menu_hamburger">
-                    <img src='{{url_for('static', filename="/svgs/menu.svg")}}' class="menu_img">
+                    <img src="static/svgs/menu.svg" class="menu_img">
                 </div>    
             </section>
         </nav>
@@ -45,9 +47,9 @@
         </header>
         <main>
             <section class="presentation container_hero">
-                <img src='{{url_for('static', filename="/imgs/mv.jpg")}}' class="presentation_pic">
+                <img src="static/imgs/Foto_mariana.jpg" class="presentation_pic">
                 <h2 class="subtitle">Sobre mi</h2>
-                <p class="presentation_copy mb-0 p-2 fs-6 navbar-expand-lg bg-body-tertiary">Soy un profesional con experiencia sólida en el desarrollo de software, destacando en el frontend, backend, y la integración de API's. Mi habilidad para crear interfaces de usuario atractivas y funcionales, junto con la capacidad de diseñar y desarrollar API's eficientes, ha sido esencial en proyectos exitosos. Mi enfoque en la eficiencia en el backend ha resultado en sistemas confiables y de alto rendimiento. Además, poseo experiencia en la creación de diagramas UML para la planificación y comunicación efectiva de proyectos.</p>
+                <p class="presentation_copy mb-0 p-2 fs-6 navbar-expand-lg bg-body-tertiary">Soy ingeniera de software con una fuerte pasión por enfrentar retos y encontrar soluciones creativas. Mi enfoque está en el desarrollo de soluciones tecnológicas innovadoras, respaldado por una sólida experiencia en bases de datos, desarrollo web, y programación en Python. Estoy en busca de oportunidades que me permitan aplicar mis conocimientos y aportar al éxito de proyectos que desafíen mis habilidades y me permitan seguir creciendo profesionalmente.</p>
             <section class="about container_hero">
                 <div class="about_texts">
                     <h2 class="subtitle">Portafolio</h2>
@@ -59,59 +61,79 @@
                     </ol>
                     <a href="https://gitlab.com/Mars8719" class="hero_bta">Mas Proyectos</a>
                 </div>
-                <figure class="about_img about_img--left">
-                    <img src='{{url_for('static', filename="/imgs/medio.jpg")}}' class="about_picture">
-                </figure>
             </section>
             <section>
                 <h2 class="subtitle">Mis habilidades</h2> 
                 <div class="Skill">
                     <ul style="list-style: none;">
                         <li>
-                            <label for="file">HTML</label> <i class="fa-brands fa-html5" style="color: #ff9500;"></i>
+                            <label for="html">
+                                <i class="fa-brands fa-html5" style="color: #ff9500;"></i>
+                                <span>HTML</span>
+                            </label>
                         </li>
                         <li>
-                            <progress id="file" max="100" value="85">85%</progress>
+                            <progress id="html" max="100" value="85">85%</progress>
                         </li>
                         <li>
-                            <label for="file">CSS</label> <i class="fa-brands fa-css3-alt" style="color: #548ef2;"></i>
+                            <label for="css">
+                                <i class="fa-brands fa-css3-alt" style="color: #548ef2;"></i>
+                                <span>CSS</span>
+                            </label>
                         </li>
                         <li>
-                            <progress id="file" max="100" value="50">50%</progress>
+                            <progress id="css" max="100" value="50">50%</progress>
                         </li>
                         <li>
-                            <label for="file">Javascript</label> <i class="fa-brands fa-js" style="color: #fff700;"></i>
+                            <label for="js">
+                                <i class="fa-brands fa-js" style="color: #fff700;"></i>
+                                <span>Javascript</span>
+                            </label>
                         </li>
                         <li>
-                            <progress id="file" max="100" value="20">20%</progress>
+                            <progress id="js" max="100" value="20">20%</progress>
                         </li>
                         <li>
-                            <label for="file">PHP</label> <i class="fa-brands fa-php" style="color: #5d00ff;"></i>
+                            <label for="php">
+                                <i class="fa-brands fa-php" style="color: #5d00ff;"></i>
+                                <span>PHP</span>
+                            </label>
                         </li>
                         <li>
-                            <progress id="file" max="100" value="20">20%</progress>
+                            <progress id="php" max="100" value="20">20%</progress>
                         </li>
                         <li>
-                            <label for="file">SQL</label> <i class="fa-solid fa-database" style="color: #86b2fd;"></i>
+                            <label for="sql">
+                                <i class="fa-solid fa-database" style="color: #86b2fd;"></i>
+                                <span>SQL</span>
+                            </label>
                         </li>
                         <li>
-                            <progress id="file" max="100" value="80">80%</progress>
+                            <progress id="sql" max="100" value="80">80%</progress>
                         </li>
                         <li>
-                            <label for="file">Python</label> <i class="fa-brands fa-python" style="color: #002566;"></i>
+                            <label for="python">
+                                <i class="fa-brands fa-python" style="color: #002566;"></i>
+                                <span>Python</span>
+                            </label>
                         </li>
                         <li>
-                            <progress id="file" max="100" value="70">70%</progress>
+                            <progress id="python" max="100" value="70">70%</progress>
                         </li>
                         <li>
-                            <label for="file">Java</label> <i class="fa-brands fa-java" style="color: #e21212;"></i>
+                            <label for="java">
+                                <i class="fa-brands fa-java" style="color: #e21212;"></i>
+                                <span>Java</span>
+                            </label>
                         </li>
                         <li>
-                            <progress id="file" max="100" value="70">70%</progress>
+                            <progress id="java" max="100" value="70">70%</progress>
                         </li>
                     </ul>
                 </div>
-            </section> 
+            </section>
+            
+            
         </main>
         <footer>
             <div class="container_hero footer_grid">
@@ -133,8 +155,8 @@
             </div>
         </footer>
         <script defer src="https://kit.fontawesome.com/28fcc82ee2.js" crossorigin="anonymous"></script>
-    <script src='{{url_for('static', filename='Javascript/app.js')}}'></script>
-    <script src='{{url_for('static', filename='Javascript/texto.js')}}'></script>
+        <script src="static/Javascript/app.js"></script>
+    <script src="static/Javascript/texto.js"></script>
     </div>
 </body>
 </html>

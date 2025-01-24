@@ -103,6 +103,7 @@
     text-decoration: none;
     border-radius: 40px;
 }
+
 /*about*/
 
 .presentation{
@@ -124,42 +125,176 @@
     margin: 0 auto;
 }
 
-.about{
-    min-height: 400px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 80px;
-    justify-items:center;
+/* Estilos para el contenedor de la sección */
+.about.container_hero {
+    display: flex;
+    justify-content: center; /* Centrar los elementos en el contenedor */
+    align-items: center;
+    padding: 50px 20px;
+    flex-wrap: wrap; /* Asegura que los elementos se ajusten en pantallas más pequeñas */
+    width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho disponible */
+}
+
+/* Estilos para los textos */
+.about_texts ol {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #000000;
+    list-style-type: none; /* Cambiar los números por puntos */
+    padding-left: 20px; /* Añadir espacio a la izquierda para los puntos */
+}
+
+.about_texts ol li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+/* Si quieres que los puntos tengan un tamaño más grande o más pequeño, puedes usar el siguiente código: */
+.about_texts ol li::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 18px; /* Puedes ajustar el tamaño del punto aquí */
+
+    font-weight: bold;
+    color: #5171fd7e; /* Puedes elegir otro color para los puntos */
+}
+
+/* Mejorando el botón */
+.hero_bta {
+    display: inline-block;
+    background: #5171fd7e;
+    padding: 12px 25px;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.hero_bta:hover {
+    background: #4c4ebe; /* Cambio de color en hover */
+    transform: scale(1.05); /* Efecto de zoom */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .about.container_hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 40px 10px; /* Espaciado reducido en pantallas pequeñas */
+    }
+
+    .about_texts {
+        padding-right: 0;
+        margin-bottom: 30px;
+        max-width: 100%; /* Asegurar que los textos se ajusten completamente en pantallas pequeñas */
+    }
+
+    .about_texts ol li::before {
+        font-size: 18px; /* Reducir el tamaño de los puntos en pantallas pequeñas */
+    }
+
+    .hero_bta {
+        padding: 10px 20px; /* Ajustar el tamaño del botón en pantallas pequeñas */
+        font-size: 16px;
+    }
+}
+
+
+
+
+/* Estilos de la barra de progreso */
+progress {
+    width: 80%;
+    height: 18px; /* Ajusta la altura de la barra */
+    border-radius: 10px;
+    border: none;
+    background-color: #f0f0f0;
+    margin-bottom: 12px; /* Ajusta el margen entre la barra y el nombre */
+}
+
+progress::-webkit-progress-bar {
+    border-radius: 10px;
+    background: #f0f0f0;
+}
+
+progress::-webkit-progress-value {
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+progress::-moz-progress-bar {
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+/* Colores para cada habilidad */
+#html::-webkit-progress-value {
+    background-color: #ff9500; /* HTML */
+}
+
+#css::-webkit-progress-value {
+    background-color: #548ef2; /* CSS */
+}
+
+#js::-webkit-progress-value {
+    background-color: #fff700; /* Javascript */
+}
+
+#php::-webkit-progress-value {
+    background-color: #5d00ff; /* PHP */
+}
+
+#sql::-webkit-progress-value {
+    background-color: #86b2fd; /* SQL */
+}
+
+#python::-webkit-progress-value {
+    background-color: #002566; /* Python */
+}
+
+#java::-webkit-progress-value {
+    background-color: #e21212; /* Java */
+}
+
+/* Estilo general para el contenedor y las etiquetas */
+.Skill ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.Skill li {
+    margin-bottom: 15px;
+}
+
+.Skill label {
+    font-size: 20px; /* Ajusta el tamaño de la fuente */
+    font-weight: 600; /* Aumenta el peso de la fuente */
+    color: #000000;
+    display: flex;
     align-items: center;
 }
-.about_img--left{
-    text-align: left;
-}
-.about_picture{
-    max-width: 100%;
-    width: 250px;
-    height:250px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    object-fit:fill;
-    object-position: top;
+
+.Skill label span {
+    margin-left: 12px; /* Espacio entre el ícono y el nombre */
+    font-size: 18px; /* Ajusta el tamaño del texto del nombre */
 }
 
-/*barra de progreso*/
-
-#file {
-    width: 50%; 
-    height: 20px; 
-    background: white; 
+.Skill i {
+    font-size: 30px; /* Ajusta el tamaño del ícono */
 }
 
-#file::-webkit-progress-value {
-    background-color: rgb(104, 116, 255); 
+/* Añadir una pequeña separación entre las barras de progreso */
+.Skill li progress {
+    margin-top: 8px;
 }
 
-#file::-moz-progress-bar {
-    background-color: rgb(113, 116, 255); 
-}
+
 
 
 

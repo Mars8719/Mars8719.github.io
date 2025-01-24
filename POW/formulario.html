@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <title>Formulario de contacto</title>
-    <link rel= "stylesheet" href='{{url_for('static', filename='CSS/estilo_index.css')}}'>
-    <link rel= "stylesheet" href='{{url_for('static', filename='CSS/estilo_formulario.css')}}'>
-    <link rel="stylesheet" href='{{url_for('static', filename='CSS/estilo_p_index.css')}}'>
+    <link rel="stylesheet" href="static/CSS/estilo_formulario.css">
+    <link rel="stylesheet" href="static/CSS/estilo_index.css">
+    <link rel="stylesheet" href="static/CSS/estilo_p_index.css">
 </head>
 
 <body>
@@ -17,7 +17,7 @@
                             <a href="/" class="menu_link">Home</a>
                         </li>
                         <li class="menu_item menu_item--sh">
-                            <a href="#" class="menu_link">Secciones <img src='{{url_for('static', filename="/svgs/arrow.svg")}}' class=" menu__arrow"></a>
+                            <a href="#" class="menu_link">Secciones<img src="static/svgs/arrow.svg" class="menu__arrow"></a>
                             
                             <ul class="menu_n">
                                 <li class="menu_inside">
@@ -27,7 +27,7 @@
                         </li>
                     </ul>    
                     <div class="menu_hamburger">
-                        <img src='{{url_for('static', filename="/svgs/menu.svg")}}' class="menu_img">
+                        <img src="static/svgs/menu.svg" class="menu_img">
                     </div>    
                 </section>
             </nav>
@@ -59,28 +59,32 @@
             <section class="footer_contact">
                 <h3 class="footer_title">Redes Sociales</h3>
                 <div class="footer_icons">
-                    <span class="footer_container-icons">
-                        <a class="fa-brands fa-whatsapp footer_icon" style="color: #000000;" href="#"></a>
+                    <span class="footer_container-icons"> 
+                        <a class="fa-brands fa-linkedin footer_icon" style="color: #000000;" href="https://www.linkedin.com/in/mariana-castro-662a2232b/"></a>
                     </span>
                     <span class="footer_container-icons">
-                        <a class="fa-brands fa-instagram footer_icon" style="color: #000000;" href="#"></a>
+                        <a class="fa-brands fa-instagram footer_icon" style="color: #000000;" href="https://www.instagram.com/spirit_free1987/"></a>
                     </span>
                 </div>
             </section>
         </div>
     </footer>
     <script defer src="https://kit.fontawesome.com/28fcc82ee2.js" crossorigin="anonymous"></script>
-    <script src='{{url_for('static', filename='Javascript/app.js')}}'></script>
+    <script src="static/Javascript/app.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-        document.getElementById("sendTo").addEventListener("click", function() {
-        var campo1 = document.getElementById("nombre").value;
-        var campo2 = document.getElementById("email").value;
-        var campo3 = document.getElementById("mensaje").value;
-        var mensaje = "Campo 1: " + campo1 + "\nCampo 2: " + campo2 + "\nCampo 3: " + campo3;
-        var confirmacion = confirm("¿Estás seguro de enviar este formulario?\n\n" + mensaje);
-    });
-});
+            document.getElementById("sendTo").addEventListener("click", function(event) {
+                var campo1 = document.getElementById("nombre").value;
+                var campo2 = document.getElementById("email").value;
+                var campo3 = document.getElementById("mensaje").value;
+                var mensaje = "Campo 1: " + campo1 + "\nCampo 2: " + campo2 + "\nCampo 3: " + campo3;
+                var confirmacion = confirm("¿Estás seguro de enviar este formulario?\n\n" + mensaje);
+                
+                if (!confirmacion) {
+                    event.preventDefault(); // Evita el envío si no se confirma
+                }
+            });
+        });
     </script>
 </body>
 </html>
